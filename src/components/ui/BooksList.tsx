@@ -8,10 +8,16 @@ const BooksList = () => {
   const { items } = useAppSelector((state) => state.books);
 
   return (
-    <Grid container spacing={4} justifyContent="space-between">
+    <Grid container spacing={4} justifyContent="center">
       {items.books.map((book, i) => {
         return (
-          <Grid key={book.id + '_' + i} xs={4} minHeight={500} maxWidth={400}>
+          <Grid
+            xs={12}
+            md={6}
+            maxWidth={400}
+            key={book.id + '_' + i}
+            minHeight={500}
+          >
             <Link to={`/book/${book.id}`}>
               <Book
                 title={book.title}

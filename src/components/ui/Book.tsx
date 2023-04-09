@@ -23,14 +23,18 @@ const Book = ({ title, description, imgSrc, isFull = false }: iBookProps) => {
   return (
     <Card
       sx={{
-        width: isFull ? '30%' : '100%',
+        maxWidth: 400,
         height: '100%',
         display: 'flex',
         flexDirection: 'column',
       }}
     >
       {imgSrc ? (
-        <CardMedia sx={{ height: 250 }} image={imgSrc} title="green iguana" />
+        <CardMedia
+          sx={{ height: '400px' }}
+          image={imgSrc}
+          title="green iguana"
+        />
       ) : (
         <Box
           display="flex"

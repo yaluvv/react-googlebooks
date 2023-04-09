@@ -43,7 +43,7 @@ const Main = () => {
   return (
     <>
       <Header />
-      <Box p={10} marginTop={20} component="main">
+      <Box marginTop={20} component="main">
         <Box component="section" display="flex" flexDirection="column">
           {status === Status.ERROR ||
             (status === Status.SUCCESS && (
